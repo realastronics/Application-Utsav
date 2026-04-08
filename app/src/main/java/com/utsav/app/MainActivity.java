@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.utsav.app.fragments.HomeFragment;
-
+import com.utsav.app.fragments.EventsFragment;
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -22,8 +22,9 @@ public class MainActivity extends AppCompatActivity {
             int id = item.getItemId();
             if (id == R.id.nav_home) {
                 loadFragment(new HomeFragment());
+            } else if (id == R.id.nav_navigate) {
+                loadFragment(new EventsFragment());
             }
-            //   other tabs added later
             return true;
         });
     }
